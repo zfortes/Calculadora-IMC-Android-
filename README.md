@@ -1,1 +1,1 @@
-# Calculadora-IMC-Android-
+# Calculadora de IMC simples desenvolvida para android.
