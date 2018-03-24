@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         this.mViewHolder.caixaAltura = findViewById(R.id.caixa_altura);
         this.mViewHolder.caixaPeso = findViewById(R.id.caixa_peso);
-        this.mViewHolder.screenResult = findViewById(R.id.screen_result);
         this.mViewHolder.buttonCalculate = findViewById(R.id.button_calculate);
 
         this.mViewHolder.buttonCalculate.setOnClickListener(this);
@@ -50,8 +49,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 startActivity(intent);
 
-
-                this.mViewHolder.screenResult.setText(String.format("%.2f", resultado));
             }
         }
     }
@@ -60,7 +57,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static class ViewHolder{
         EditText caixaPeso;
         EditText caixaAltura;
-        TextView screenResult;
         Button buttonCalculate;
     }
 }
