@@ -1,5 +1,6 @@
 package com.develop.fortes.calculadoraimc;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -39,6 +40,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //Calculo IMC
                 altura = altura * altura;
                 resultado = peso/altura;
+
+                //Bundle que enviara os dados para a ResultadoActivity
+                Intent intent = new Intent(this, ResultadoActivity.class);
+                Bundle bundle = new Bundle();
+
+                bundle.putFloat("resultado", resultado);
+                intent.putExtras(bundle);
+
+                startActivity(intent);
+
 
                 this.mViewHolder.screenResult.setText(String.format("%.2f", resultado));
             }
