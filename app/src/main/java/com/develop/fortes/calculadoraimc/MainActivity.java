@@ -28,12 +28,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         int id = view.getId();
-        if (id== R.id.button_calculate){
-            if ((!this.mViewHolder.caixaPeso.getText().toString().isEmpty()) && (!this.mViewHolder.caixaAltura.getText().toString().isEmpty())){
 
-                //Pega os valores das caixas de texto peso e altura
+
+        if (id== R.id.button_calculate){
+
+            Float altura = Float.valueOf(this.mViewHolder.caixaAltura.getText().toString());
+            if ((!this.mViewHolder.caixaPeso.getText().toString().isEmpty()) && ((altura < 2.30))){
+
+                //Pega os valores das caixas de texto peso
                 Float peso = Float.valueOf(this.mViewHolder.caixaPeso.getText().toString());
-                Float altura = Float.valueOf(this.mViewHolder.caixaAltura.getText().toString());
+
+
 
                 //Calculo IMC
                 altura = altura * altura;
