@@ -4,45 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="#000"
     tools:context="com.develop.fortes.calculadoraimc.MainActivity">
 
     <TextView
         android:id="@+id/peso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="78dp"
-        android:text="Peso" />
+        android:layout_alignBottom="@+id/caixa_peso"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="19dp"
+        android:textColor="@color/letras"
+        android:text="Peso"
+        android:textSize="25dp" />
 
 
     <EditText
         android:id="@+id/caixa_peso"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_below="@+id/peso"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="13dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="111dp"
         android:ems="8"
-        android:inputType="numberDecimal" />
+        android:background="@color/letras"
+        android:inputType="numberDecimal"
+        android:textSize="25dp" />
 
     <TextView
         android:id="@+id/altura"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/caixa_altura"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="12dp"
-        android:text="Altura" />
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="-89dp"
+        android:layout_toStartOf="@+id/caixa_peso"
+        android:text="Altura"
+        android:textColor="@color/letras"
+        android:textSize="25dp" />
 
     <EditText
         android:id="@+id/caixa_altura"
-        android:layout_width="wrap_content"
+        android:layout_width="237dp"
         android:layout_height="50dp"
-
-        android:layout_alignLeft="@+id/caixa_peso"
-        android:layout_alignStart="@+id/caixa_peso"
+        android:background="@color/letras"
+        android:layout_alignEnd="@+id/caixa_peso"
         android:layout_centerVertical="true"
         android:ems="8"
         android:inputType="numberDecimal" />
