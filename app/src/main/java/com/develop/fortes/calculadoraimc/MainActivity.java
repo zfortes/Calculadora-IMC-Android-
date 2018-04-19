@@ -7,6 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.io.Serializable;
+
+import Dados.Imc;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ViewHolder mViewHolder = new ViewHolder();
@@ -36,20 +40,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if ((!this.mViewHolder.caixaPeso.getText().toString().isEmpty()) && ((altura < 2.30))){
 
                 //Pega os valores das caixas de texto peso
+                Imc imc = new Imc();
                 Float peso = Float.valueOf(this.mViewHolder.caixaPeso.getText().toString());
-
-
-
-                //Calculo IMC
-                altura = altura * altura;
-                resultado = peso/altura;
+                imc.calcula(peso, altura);
 
                 //Bundle que enviara os dados para a ResultadoActivity
                 Intent intent = new Intent(this, ResultadoActivity.class);
-                Bundle bundle = new Bundle();
 
-                bundle.putFloat("resultado", resultado);
-                intent.putExtras(bundle);
+                intent.putExtra("imc", imc);
 
                 startActivity(intent);
 

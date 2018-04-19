@@ -1,10 +1,12 @@
 package Dados;
 
-public class Imc {
+import java.io.Serializable;
+
+public class Imc implements Serializable {
 
     private Float imc;
 
-    public void calcula(Float peso, Float altura){
+    public void calcula(Float peso, Float altura) {
 
         //Calculo IMC
         altura = altura * altura;
