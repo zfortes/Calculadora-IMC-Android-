@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000"
+    android:background="#9E9E9E"
     tools:context="com.develop.fortes.calculadoraimc.MainActivity">
 
     <TextView
