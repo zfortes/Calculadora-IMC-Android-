@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9E9E9E"
+    android:background="@color/background"
     tools:context="com.develop.fortes.calculadoraimc.MainActivity">
 
     <TextView
@@ -29,7 +29,7 @@
         android:layout_marginStart="89dp"
         android:layout_marginTop="111dp"
         android:ems="8"
-        android:background="@color/letras"
+        android:background="@color/caixa"
         android:inputType="numberDecimal"
         android:textSize="25dp" />
 
@@ -48,7 +48,7 @@
         android:id="@+id/caixa_altura"
         android:layout_width="237dp"
         android:layout_height="50dp"
-        android:background="@color/letras"
+        android:background="@color/caixa"
         android:layout_alignEnd="@+id/caixa_peso"
         android:layout_centerVertical="true"
         android:ems="8"
